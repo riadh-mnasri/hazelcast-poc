@@ -1,0 +1,15 @@
+env:
+  cache:
+      name: my-poc-cache
+      port: 5701
+      multicastIp: 224.0.0.1
+      multicastPort: 65534
+      interfaceIp: 239.255.255.250
+      members:
+        - 127.0.0.1
+      defaultInstance:
+        timeToLiveSeconds: 0
+        backupCount: 0
+      referentielInstance:
+        timeToLiveSeconds: 604800
+        backupCount: 0
