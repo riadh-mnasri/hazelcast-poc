@@ -21,17 +21,17 @@ public class MyApp
         CacheConfig cacheConfig = ctx.getBean("cacheConfig", CacheConfig.class);
         HazelcastInstance hazelcastInstance = cacheConfig.hazelcastInstance();
         Map<Integer, String> customers = hazelcastInstance.getMap( "customers" );
-        customers.put( 1, "Franck" );
-        customers.put( 2, "Jean" );
-        customers.put( 3, "Marcel" );
+        customers.put( 1, "Riadh" );
+        customers.put( 2, "Sonia" );
+        customers.put( 3, "Seji" );
 
         System.out.println( "Customer with key 1: " + customers.get(1) );
         System.out.println( "Map Size:" + customers.size() );
 
         Queue<String> queueCustomers = hazelcastInstance.getQueue( "customers" );
-        queueCustomers.offer( "Tom" );
-        queueCustomers.offer( "Mary" );
-        queueCustomers.offer( "Jane" );
+        queueCustomers.offer( "MNASRI" );
+        queueCustomers.offer( "BGL" );
+        queueCustomers.offer( "MNAS" );
 
         System.out.println( "First customer: " + queueCustomers.poll() );
         System.out.println( "Second customer: "+ queueCustomers.peek() );
